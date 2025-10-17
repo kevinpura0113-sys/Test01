@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="media/background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="particles">
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+
+
+  <div class="overlay"></div>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form onsubmit="handleLogin(event)">
+      <input type="text" name="username" placeholder="Username" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <div class="signup-link">
+      Don't have an account? <a href="signUp.html">Sign up</a>
+    </div>
+  </div>
+
+  <script src="/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  background: url('https://i.pinimg.com/originals/a0/59/0e/a0590e93a50aa3da22b16ecc2535bfb2.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+
+/* Overlay for contrast */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Neon glow container */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px #0ff;
+  text-align: center;
+  width: 320px;
+}
+
+/* Neon heading */
+.login-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Neon inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #0ff;
+  border-radius: 5px;
+  background: transparent;
+  color: #0ff;
+  font-size: 1em;
+  text-shadow: 0 0 5px #0ff;
+  box-shadow: 0 0 10px #0ff inset;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-container input::placeholder {
+  color: #0ff;
+  opacity: 0.7;
+}
+
+/* Neon button */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0ff;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #00f6ff;
+  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+/* Signup link */
+.signup-link {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.signup-link a {
+  color: #0ff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+  color: #00f6ff;
+}
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff, 0 0 90px #0ff;
+  }
+}
+
+.login-container {
+  animation: neonPulse 2.5s infinite ease-in-out;
+}
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #fff;
+  animation: floatUp 12s infinite ease-in, twinkle 2s infinite ease-in-out;
+}
+
+
+.particle:nth-child(1) {
+  left: 20%;
+  animation-delay: 0s;
+}
+.particle:nth-child(2) {
+  left: 40%;
+  animation-delay: 2s;
+}
+.particle:nth-child(3) {
+  left: 60%;
+  animation-delay: 4s;
+}
+.particle:nth-child(4) {
+  left: 80%;
+  animation-delay: 6s;
+}
+.particle:nth-child(5) {
+  left: 50%;
+  animation-delay: 8s;
+}
+
+@keyframes floatUp {
+  0% {
+    top: 100%;
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    top: -10%;
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../media/starfield.png') repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
